@@ -3,6 +3,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { LoginService } from '../login.service';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -12,7 +13,7 @@ import { MatInputModule } from '@angular/material/input';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private _loginService: LoginService) { }
+  constructor(private _loginService: LoginService, private _router: Router) { }
 
   form;
 
@@ -30,7 +31,8 @@ export class LoginComponent implements OnInit {
           if(res.status != 1){
             alert(res.message);
           } else{
-            console.log(res.message)
+            localStorage.setItem('token', res.message);
+            this._router.navigate(['/home']);
           }
         }
       )

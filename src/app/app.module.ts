@@ -7,18 +7,23 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
+import {MatCardModule} from '@angular/material/card';
 
 import { AppComponent } from './app.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { LoginService } from './login.service';
 import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './home/home.component';
+import { NoteComponent } from './note/note.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     RegistrationComponent,
-    LoginComponent
+    LoginComponent,
+    HomeComponent,
+    NoteComponent
   ],
   imports: [
     BrowserModule,
@@ -27,6 +32,7 @@ import { LoginComponent } from './login/login.component';
     MatFormFieldModule,
     MatInputModule,
     MatIconModule,
+    MatCardModule,
     BrowserAnimationsModule,
     RouterModule.forRoot([
       {
@@ -40,6 +46,10 @@ import { LoginComponent } from './login/login.component';
       {
         'path': '',
         component: LoginComponent
+      },
+      {
+        'path': 'home',
+        component: HomeComponent
       }
     ])
   ],
