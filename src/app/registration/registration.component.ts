@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { LoginService } from '../login.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-registration',
@@ -11,7 +12,7 @@ export class RegistrationComponent implements OnInit {
 
   form;
 
-  constructor(private _loginService: LoginService) { }
+  constructor(private _loginService: LoginService, private _router: Router) { }
 
   ngOnInit() {
 
@@ -25,12 +26,14 @@ export class RegistrationComponent implements OnInit {
 
   }
 
-  register(user){
+  register(user) {
     this._loginService.register(user)
       .subscribe(
-        res => { 
-          if(res.status != 1){
+        res => {
+          if (res.status != 1) {
             alert(res.message);
+          } else {
+            this._router.navigate(['login']);
           }
         }
       )

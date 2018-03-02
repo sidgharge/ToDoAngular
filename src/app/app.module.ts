@@ -8,6 +8,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import {MatButtonModule} from '@angular/material/button';
 
 import { AppComponent } from './app.component';
 import { RegistrationComponent } from './registration/registration.component';
@@ -33,7 +35,9 @@ import { NoteComponent } from './note/note.component';
     MatInputModule,
     MatIconModule,
     MatCardModule,
+    MatButtonModule,
     BrowserAnimationsModule,
+    FlexLayoutModule,
     RouterModule.forRoot([
       {
         'path': 'register',
