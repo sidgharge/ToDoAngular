@@ -1,19 +1,26 @@
-<div class="container" fxLayout fxLayout.xs="column" fxLayoutAlign="center">
-
-  <form [formGroup]="form" (ngSubmit)="login(form.value)" class="login-form" fxFlex="40%">
-    <mat-form-field>
+<form [formGroup]="form" (ngSubmit)="login(form.value)">
+  <div class="container" fxLayout="row" fxLayoutAlign="center center">
+    <mat-form-field fxFlex fxFlex.gt-xs="400px">
       <input matInput placeholder="Enter your email" formControlName="email" required>
     </mat-form-field>
+  </div>
 
-    <mat-form-field>
+  <div class="container" fxLayout="row" fxLayoutAlign="center center">
+    <mat-form-field fxFlex fxFlex.gt-xs="400px">
       <input matInput placeholder="Enter your password" [type]="hide ? 'text' : 'password'" formControlName="password">
       <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
     </mat-form-field>
+  </div>
 
-    <button mat-raised-button color="primary">Login</button>
+  <div class="container button-row" fxLayout="row" fxLayoutAlign="center">
+    <button fxFlex fxFlex.gt-xs="400px" mat-raised-button color="primary">Login</button>
+  </div>
 
-    <button mat-raised-button color="primary">Register</button>
 
-  </form>
+</form>
 
-</div>
+<br>
+
+<div class="container button-row" fxLayout="row" fxLayoutAlign="center">
+    <a [routerLink]="['/register']">Create an account</a>
+  </div>

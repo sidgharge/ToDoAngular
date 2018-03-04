@@ -1,33 +1,49 @@
+<form [formGroup]="form" (ngSubmit)="register(form.value)">
 
-
-  <form [formGroup]="form" (ngSubmit)="register(form.value)"
-  class="container" fxLayout="column" 
-  fxLayoutAlign.gt-xs="start center" 
-  fxLayoutAlign.lt-xs="start none">
-
-    <mat-form-field fxFlex>
+  <div class="container" fxLayout="row" fxLayoutAlign="center center">
+    <mat-form-field fxFlex fxFlex.gt-xs="400px">
       <input matInput placeholder="First Name" formControlName="firstName" required>
     </mat-form-field>
-    <br>
-    <mat-form-field fxFlex>
+  </div>
+
+  <div class="container" fxLayout="row" fxLayoutAlign="center">
+    <mat-form-field fxFlex fxFlex.gt-xs="400px">
       <input matInput placeholder="Last Name" formControlName="lastName" required>
     </mat-form-field>
-    <br>
-    <mat-form-field fxFlex>
+  </div>
+
+  <div class="container" fxLayout="row" fxLayoutAlign="center">
+    <mat-form-field fxFlex fxFlex.gt-xs="400px">
       <input matInput placeholder="Contact" formControlName="contact" required>
     </mat-form-field>
-    <br>
-    <mat-form-field fxFlex>
+  </div>
+
+  <div class="container" fxLayout="row" fxLayoutAlign="center">
+    <mat-form-field fxFlex fxFlex.gt-xs="400px">
       <input matInput placeholder="Email Id" formControlName="email" required>
     </mat-form-field>
-    <br>
-    <mat-form-field fxFlex>
+  </div>
+
+
+  <div class="container" fxLayout="row" fxLayoutAlign="center">
+    <mat-form-field fxFlex fxFlex.gt-xs="400px">
       <input matInput placeholder="Enter your password" [type]="hide ? 'text' : 'password'" formControlName="password" required>
       <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
     </mat-form-field>
-    <br>
-    <div class="button-row" fxLayoutAlign="center" fxFlex>
-      <button mat-raised-button color="primary" [disabled]="!form.valid">Register</button>
-    </div>
+  </div>
 
-  </form>
+  <div class="container button-row" fxLayout="row" fxLayoutAlign="center">
+    <button fxFlex fxFlex.gt-xs="400px" mat-raised-button color="primary" [disabled]="!form.valid">Register</button>
+  </div>
+
+</form>
+
+<br>
+
+<div class="container button-row" fxLayout="row" fxLayoutAlign="center">
+  <p> Already have an account? </p>
+</div>
+
+<div class="container button-row" fxLayout="row" fxLayoutAlign="center">
+  <a [routerLink]="['/login']">Login</a>
+</div>

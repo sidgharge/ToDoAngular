@@ -10,6 +10,8 @@ import { MatIconModule } from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatButtonModule} from '@angular/material/button';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 import { AppComponent } from './app.component';
 import { RegistrationComponent } from './registration/registration.component';
@@ -36,6 +38,8 @@ import { NoteComponent } from './note/note.component';
     MatIconModule,
     MatCardModule,
     MatButtonModule,
+    MatToolbarModule,
+    MatSidenavModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
     RouterModule.forRoot([
