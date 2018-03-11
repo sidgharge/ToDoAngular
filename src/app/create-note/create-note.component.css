@@ -11,3 +11,11 @@
 	content: attr(data-text);;
 	color: grey;
 }
+
+.action-element {
+    cursor: pointer;
+}
+
+.action-img {
+    width: 22px;
+}
