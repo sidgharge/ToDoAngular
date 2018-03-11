@@ -17,23 +17,27 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     this.form = new FormGroup({
-      email: new FormControl("", Validators.required),
-      password: new FormControl("", Validators.compose([Validators.required, Validators.minLength(8)]))
+      email: new FormControl('', Validators.required),
+      password: new FormControl('', Validators.compose([Validators.required, Validators.minLength(8)]))
     });
   }
 
-  login(user){
+  login(user) {
     this._loginService.login(user)
       .subscribe(
-        res => { 
-          if(res.status != 1){
+        res => {
+          if (res.status !== 1) {
             alert(res.message);
-          } else{
+          } else {
             localStorage.setItem('token', res.message);
             this._router.navigate(['/home']);
           }
         }
-      )
+      );
   }
-  
+
+  redirectToRegister() {
+    this._router.navigate(['/register']);
+  }
+
 }

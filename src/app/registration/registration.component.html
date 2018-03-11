@@ -1,4 +1,4 @@
-<form [formGroup]="form" (ngSubmit)="register(form.value)">
+<!-- <form [formGroup]="form" (ngSubmit)="register(form.value)">
 
   <div class="container" fxLayout="row" fxLayoutAlign="center center">
     <mat-form-field fxFlex fxFlex.gt-xs="400px">
@@ -46,4 +46,67 @@
 
 <div class="container button-row" fxLayout="row" fxLayoutAlign="center">
   <a [routerLink]="['/login']">Login</a>
-</div>
+</div> -->
+
+<div fxLayoutAlign="center center" style="height: 100vh;
+  user-select: none;
+  background-color: #fb0;">
+
+  <mat-card fxFlex="400px" fxFlex.xs="100%" fxFlexAlign="center">
+
+    <mat-card-header fxLayout="row" fxLayoutAlign="center">
+
+      <img style="width: 15vh; height: 15vh;" mat-card-image src="assets/keep.png" alt="Logo">
+
+    </mat-card-header>
+
+    <mat-card-content>
+
+      <form [formGroup]="form" (ngSubmit)="register(form.value)">
+
+        <div fxLayout="row">
+          <mat-form-field fxFlex="350px" fxFlex.xs="100%">
+            <input matInput placeholder="First name" formControlName="firstName" required>
+          </mat-form-field>
+        </div>
+
+        <div fxLayout="row">
+          <mat-form-field fxFlex="350px" fxFlex.xs="100%">
+            <input matInput placeholder="Last name" formControlName="lastName" required>
+          </mat-form-field>
+        </div>
+
+        <div fxLayout="row">
+          <mat-form-field fxFlex="350px" fxFlex.xs="100%">
+            <input matInput placeholder="Contact" formControlName="contact" required>
+          </mat-form-field>
+        </div>
+
+        <div fxLayout="row">
+          <mat-form-field fxFlex="350px" fxFlex.xs="100%">
+            <input matInput placeholder="Email" formControlName="email" required>
+          </mat-form-field>
+        </div>
+
+        <div fxLayout="row">
+          <mat-form-field fxFlex="350px" fxFlex.xs="100%">
+            <input matInput placeholder="Password" [type]="hide ? 'text' : 'password'" formControlName="password">
+            <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </mat-form-field>
+        </div>
+
+        <div fxLayout="row">
+            <button fxFlex mat-raised-button 
+            style="color:white; font-weight: bold; 
+              background-color: #fb0;">Register</button>
+          </div>
+
+      </form>
+
+    </mat-card-content>
+
+      <div fxLayout="row" fxLayoutAlign="center">
+        <span (click)="redirectToLogin()" style="color: #fb0; cursor: pointer;">Alread have an account?</span>
+      </div>
+
+  </mat-card>

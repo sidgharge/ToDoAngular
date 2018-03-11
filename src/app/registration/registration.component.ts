@@ -17,11 +17,11 @@ export class RegistrationComponent implements OnInit {
   ngOnInit() {
 
     this.form = new FormGroup({
-      firstName: new FormControl("", Validators.compose([Validators.required, Validators.minLength(3)])),
-      lastName: new FormControl("", Validators.compose([Validators.required, Validators.minLength(3)])),
-      contact: new FormControl("", Validators.compose([Validators.required, Validators.pattern("^[0-9]{10}$")])),
-      email: new FormControl("", Validators.required),
-      password: new FormControl("", Validators.compose([Validators.required, Validators.minLength(8)]))
+      firstName: new FormControl('', Validators.compose([Validators.required, Validators.minLength(3)])),
+      lastName: new FormControl('', Validators.compose([Validators.required, Validators.minLength(3)])),
+      contact: new FormControl('', Validators.compose([Validators.required, Validators.pattern("^[0-9]{10}$")])),
+      email: new FormControl('', Validators.required),
+      password: new FormControl('', Validators.compose([Validators.required, Validators.minLength(8)]))
     });
 
   }
@@ -30,13 +30,17 @@ export class RegistrationComponent implements OnInit {
     this._loginService.register(user)
       .subscribe(
         res => {
-          if (res.status != 1) {
+          if (res.status !== 1) {
             alert(res.message);
           } else {
             this._router.navigate(['login']);
           }
         }
-      )
+      );
+  }
+
+  redirectToLogin() {
+    this._router.navigate(['/login']);
   }
 
 }

@@ -1,26 +1,54 @@
-<form [formGroup]="form" (ngSubmit)="login(form.value)">
-  <div class="container" fxLayout="row" fxLayoutAlign="center center">
-    <mat-form-field fxFlex fxFlex.gt-xs="400px">
-      <input matInput placeholder="Enter your email" formControlName="email" required>
-    </mat-form-field>
-  </div>
+<div fxLayoutAlign="center center"
+  style="height: 100vh;
+  user-select: none;
+  background-color: #fb0;">
 
-  <div class="container" fxLayout="row" fxLayoutAlign="center center">
-    <mat-form-field fxFlex fxFlex.gt-xs="400px">
-      <input matInput placeholder="Enter your password" [type]="hide ? 'text' : 'password'" formControlName="password">
-      <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-    </mat-form-field>
-  </div>
+  <mat-card fxFlex="400px" fxFlex.xs="100%" fxFlexAlign="center">
 
-  <div class="container button-row" fxLayout="row" fxLayoutAlign="center">
-    <button fxFlex fxFlex.gt-xs="400px" mat-raised-button color="primary">Login</button>
-  </div>
+    <mat-card-header fxLayout="row" fxLayoutAlign="center">
+
+      <img 
+      style="width: 15vh; height: 15vh;"
+       mat-card-image src="assets/keep.png" alt="Logo">
+
+    </mat-card-header>
+
+    <mat-card-content>
+
+      <form [formGroup]="form" (ngSubmit)="login(form.value)">
+
+        <div fxLayout="row">
+          <mat-form-field fxFlex="350px" fxFlex.xs="100%">
+            <input matInput placeholder="Email" formControlName="email" required>
+          </mat-form-field>
+        </div>
+
+        <div fxLayout="row">
+          <mat-form-field fxFlex="350px" fxFlex.xs="100%">
+            <input matInput placeholder="Password" [type]="hide ? 'text' : 'password'" formControlName="password">
+            <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </mat-form-field>
+        </div>
+
+        <div fxLayout="row">
+          <button fxFlex mat-raised-button 
+          style="color:white; font-weight: bold; 
+            background-color: #fb0;">Login</button>
+        </div>
+
+      </form>
 
 
-</form>
+      <br>
+      <div fxLayout="row" fxLayoutAlign="space-between">
+        <span (click)="redirectToRegister()" style="color: #fb0; cursor: pointer;">Register</span>
+        <span (click)="redirectToForgotPassword()" style="color: #fb0; cursor: pointer;">Forgot your password?</span>
+        <!-- <a class="background-yello" [routerLink]="['/register']">Register</a>
+        <a [routerLink]="['/register']">Forgot your password?</a> -->
+      </div>
 
-<br>
+    </mat-card-content>
 
-<div class="container button-row" fxLayout="row" fxLayoutAlign="center">
-    <a [routerLink]="['/register']">Create an account</a>
-  </div>
+  </mat-card>
+
+</div>
