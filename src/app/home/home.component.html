@@ -1,18 +1,29 @@
-<mat-toolbar class="toolbar-color">
-    <span><b>Fundoo</b> Keep</span>
-</mat-toolbar>
+<ng-container>
 
-<!-- <mat-sidenav-container
-    class="example-container" (backdropClick)="close('backdrop')" *ngIf="true">
-  <mat-sidenav #sidenav (keydown.escape)="close('escape')" disableClose>
-    <p><button mat-button (click)="close('toggle button')">Toggle</button></p>
-  </mat-sidenav>
+  <mat-toolbar class="toolbar-color">
+    <span>
+      <b>Fundoo</b> Keep
+    </span>
+  </mat-toolbar>
 
-  <mat-sidenav-content>
-    <p><button mat-button (click)="sidenav.open()">Open</button></p>
-    <p>Closed due to: {{reason}}</p>
-  </mat-sidenav-content>
-</mat-sidenav-container> -->
+  <mat-sidenav-container class="side-container">
 
+    <mat-sidenav mode="side" #sidenav opened fxHide.xs style="background-color: #e8e8e8;">
 
-<app-note></app-note>
+      <ul>
+        <li class="side-element">
+            <img width="24px" src="assets/keep-grey.png">
+            <span style="padding-left: 32px;">Notes</span>
+        </li>
+      </ul>
+      
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <app-create-note></app-create-note>
+      <app-note></app-note>
+    </mat-sidenav-content>
+
+  </mat-sidenav-container>
+
+</ng-container>

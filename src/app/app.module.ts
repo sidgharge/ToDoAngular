@@ -19,6 +19,8 @@ import { LoginService } from './login.service';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { NoteComponent } from './note/note.component';
+import { SideNavComponent } from './side-nav/side-nav.component';
+import { CreateNoteComponent } from './create-note/create-note.component';
 
 
 @NgModule({
@@ -27,7 +29,9 @@ import { NoteComponent } from './note/note.component';
     RegistrationComponent,
     LoginComponent,
     HomeComponent,
-    NoteComponent
+    NoteComponent,
+    SideNavComponent,
+    CreateNoteComponent
   ],
   imports: [
     BrowserModule,

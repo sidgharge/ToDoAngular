@@ -33,7 +33,7 @@
         <div fxLayout="row">
           <button fxFlex mat-raised-button 
           style="color:white; font-weight: bold; 
-            background-color: #fb0;">Login</button>
+            background-color: #fb0;" [disabled]="!form.valid">Login</button>
         </div>
 
       </form>
@@ -43,8 +43,6 @@
       <div fxLayout="row" fxLayoutAlign="space-between">
         <span (click)="redirectToRegister()" style="color: #fb0; cursor: pointer;">Register</span>
         <span (click)="redirectToForgotPassword()" style="color: #fb0; cursor: pointer;">Forgot your password?</span>
-        <!-- <a class="background-yello" [routerLink]="['/register']">Register</a>
-        <a [routerLink]="['/register']">Forgot your password?</a> -->
       </div>
 
     </mat-card-content>

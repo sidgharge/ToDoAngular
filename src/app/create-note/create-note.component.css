@@ -1,0 +1,13 @@
+.title {
+   font-weight: bold;
+   white-space: pre-wrap;
+   word-wrap: break-word;
+   outline: none;
+   cursor: text;
+   line-height: 22px;
+}
+
+[contenteditable]:empty:before {
+	content: attr(data-text);;
+	color: grey;
+}

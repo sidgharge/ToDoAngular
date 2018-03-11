@@ -11,7 +11,7 @@ export class LoginService {
 
   headers: Headers;
   options: RequestOptions;
-  constructor(private _http: Http) { 
+  constructor(private _http: Http) {
     const authorization = 'todoBearer ' + localStorage.getItem('token');
     this.headers = new Headers();
     this.headers.append('Authorization', authorization);
