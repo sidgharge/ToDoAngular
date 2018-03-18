@@ -1,4 +1,17 @@
-.note-card :hover .action {
+.note-card {
+    margin: 10px; 
+    background: white;
+    position: relative;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),
+     0 3px 1px -2px rgba(0,0,0,0.2), 
+     0 1px 5px 0 rgba(0,0,0,0.12);
+}
+
+.note-card:hover .action {
+    visibility: visible;
+}
+
+.note-card:hover .pin {
     visibility: visible;
 }
 
@@ -8,17 +21,25 @@
     padding: 2px;
 }
 
+.action-element:hover {
+    opacity: .87;
+}
+
 .action-img {
     width: 20px;
     margin: 3px;
 }
 
-.action-element :hover {
-    opacity: 1;
-}
-
 .action{
     background-color: white; 
     padding: 4px 4px;
-    visibility: visible;
+    visibility: hidden;
+}
+
+.pin {
+    position: absolute;
+    width: 18px;
+    right: 1px;
+    top: 4px;
+    visibility: hidden;
 }

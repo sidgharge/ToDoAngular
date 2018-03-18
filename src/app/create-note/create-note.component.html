@@ -1,51 +1,42 @@
-<mat-card fxFlex="600px" fxFlex.xs="100%" fxFlexAlign="center">
-  <mat-card-header fxLayout="row">
+<div fxFlex="600px" fxFlex.xs="100%" fxFlexAlign="center" class="parent">
 
+  <div fxLayout="row" style="padding: 10px 15px;">
+    <img [src]="pinSrc" class="action-element pin" (click)="pin()">
     <div id="title" fxFlex="530px" fxFlex.xs="100%" contenteditable="true" role="textbox" data-text="Title" class="title"></div>
+  </div>
 
-  </mat-card-header>
-
-  <mat-card-header fxLayout="row" style="margin-top: 10px;">
+  <div fxLayout="row" style="padding: 10px 15px;">
     <div id="description" fxFlex="530px" fxFlex.xs="100%" contenteditable="true" role="textbox" data-text="Take a note..." class="title"
       style="font-weight: normal;"></div>
-  </mat-card-header>
+  </div>
 
-  <mat-card-header fxLayout="row" style="margin-top: 10px;">
-      <a fxFlex="38px" fxFlexAlign="center" class="action-element">
-          <img class="action-img" src="assets/reminder.svg">
-        </a>
-  
-        <a fxFlex="38px" class="action-element">
-          <img class="action-img" src="assets/collaborator.svg">
-        </a>
-  
-        <a fxFlex="38px" class="action-element">
-          <img class="action-img" src="assets/color-pallete.svg">
-        </a>
-  
-        <a fxFlex="38px" class="action-element">
-          <img class="action-img" src="assets/gallery.svg">
-        </a>
-  
-        <a fxFlex="38px" class="action-element">
-          <img class="action-img" src="assets/archive.svg">
-        </a>
-  
-        <a fxFlex="38px" class="action-element">
-          <img class="action-img" src="assets/more.svg">
-        </a>
+  <div style="padding: 4px;">
+    <a fxFlex="38px" fxFlexAlign="center" class="action-element">
+      <img class="action-img" src="assets/reminder.svg">
+    </a>
+
+    <a fxFlex="38px" class="action-element">
+      <img class="action-img" src="assets/collaborator.svg">
+    </a>
+
+    <a fxFlex="38px" class="action-element">
+      <img class="action-img" src="assets/color-pallete.svg">
+    </a>
+
+    <a fxFlex="38px" class="action-element">
+      <img class="action-img" src="assets/gallery.svg">
+    </a>
+
+    <a fxFlex="38px" class="action-element">
+      <img class="action-img" src="assets/archive.svg">
+    </a>
+
+    <a fxFlex="38px" class="action-element">
+      <img class="action-img" src="assets/more.svg">
+    </a>
 
     <div fxFlexAlign="center" class="btn-done-div" (click)="createNote()">
       <span class="btn-done">DONE</span>
     </div>
-  </mat-card-header>
-
-</mat-card>
-
-<!-- <div class="container" fxLayout="row">
-
-    <div fxFlex="100%" contenteditable="true" role="textbox" data-text="Title" class="title"></div>
-
-    <div fxFlex="100%" contenteditable="true" role="textbox" data-text="Take a note..." class="title" style="font-weight: normal;"></div>
-
-</div> -->
+  </div>
+</div>

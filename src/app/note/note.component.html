@@ -1,20 +1,9 @@
-<!-- <div fxLayout="row wrap" fxLayoutAlign="center" style="margin-top: 20px;">
-  <mat-card fxFlex="240px"  fxFlex.xs="100%" *ngFor="let note of notes" style="padding: 12px 15px 15px 15px;">
-
-    <mat-card-header>
-      <mat-card-title [innerHTML]="note.title"></mat-card-title>
-    </mat-card-header>
-  
-    <mat-card-header>
-      <mat-card-title [innerHTML]="note.description"></mat-card-title>
-    </mat-card-header>
-    
-  </mat-card>
-</div> -->
-
 <div fxLayout="row wrap" fxLayoutAlign="center" style="margin-top: 20px;">
 
-  <div class="note-card" fxFlex="240px" fxFlex.xs="100%" *ngFor="let note of notes" style="margin: 10px; background: white;">
+  <div class="note-card" fxFlex="240px" fxFlex.xs="100%" *ngFor="let note of notes">
+    
+      <img src="assets/pin.svg" class="action-element pin" (click)="pin()">
+    
     <div style="font-weight: bold; padding: 10px 15px 0px 15px;" [innerHTML]="note.title"></div>
 
     <div style="padding: 12px 15px 15px 15px;" [innerHTML]="note.description"></div>

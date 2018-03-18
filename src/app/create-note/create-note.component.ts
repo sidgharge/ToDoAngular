@@ -10,6 +10,10 @@ export class CreateNoteComponent implements OnInit {
 
   newNote: any = {};
 
+  pinSrc = 'assets/pin.svg';
+
+  pinned = false;
+
   constructor(private _service: LoginService) { }
 
   ngOnInit() {
@@ -18,12 +22,23 @@ export class CreateNoteComponent implements OnInit {
   createNote() {
     this.newNote.title = (document.getElementById('title')).innerHTML;
     this.newNote.description = (document.getElementById('description')).innerHTML;
+    this.newNote.isPinned = this.pinned;
     this._service.createNote(this.newNote).subscribe(data => {
       this._service.notes.push(data);
       (document.getElementById('title')).innerHTML = '';
       (document.getElementById('description')).innerHTML = '';
       }
     );
+  }
+
+  pin() {
+    if (this.pinned) {
+      this.pinSrc = 'assets/pin.svg';
+      this.pinned = false;
+    } else {
+      this.pinSrc = 'assets/bluepin.svg';
+      this.pinned = true;
+    }
   }
 
 }

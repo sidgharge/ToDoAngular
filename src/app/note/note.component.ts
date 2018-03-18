@@ -20,6 +20,7 @@ export class NoteComponent implements OnInit {
       this._loginService.getNotes().subscribe(data => {
         this.notes = data.notes;
         this._loginService.notes = this.notes;
+        console.log(this.notes);
       });
     }
   }
