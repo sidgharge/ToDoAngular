@@ -8,7 +8,7 @@
 
   <mat-sidenav-container class="side-container">
 
-    <mat-sidenav mode="side" #sidenav opened fxHide.xs style="background-color: #e8e8e8;">
+    <mat-sidenav mode="side" #sidenav opened fxHide.xs style="background-color: #e8e8e8; width: 280px;">
 
       <ul>
         <li>
@@ -22,8 +22,10 @@
     </mat-sidenav>
 
     <mat-sidenav-content>
-      <app-create-note fxLayoutAlign="center"></app-create-note>
+      <app-create-note fxLayoutAlign="center" style="margin-top: 20px;"></app-create-note>
+      <!-- <app-note fxLayput="row" fxLayoutWrap="wrap" fxLayoutGap="10px" style="margin-top: 20px;"></app-note> -->
       <app-note></app-note>
+
     </mat-sidenav-content>
 
   </mat-sidenav-container>

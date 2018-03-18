@@ -1,11 +1,48 @@
-<mat-card class="note-card" *ngFor="let note of notes">
+<!-- <div fxLayout="row wrap" fxLayoutAlign="center" style="margin-top: 20px;">
+  <mat-card fxFlex="240px"  fxFlex.xs="100%" *ngFor="let note of notes" style="padding: 12px 15px 15px 15px;">
 
-  <mat-card-header>
-    <mat-card-title>{{note.title}}</mat-card-title>
-  </mat-card-header>
-
-  <mat-card-content>
-    {{note.description}}
-  </mat-card-content>
+    <mat-card-header>
+      <mat-card-title [innerHTML]="note.title"></mat-card-title>
+    </mat-card-header>
   
-</mat-card>
+    <mat-card-header>
+      <mat-card-title [innerHTML]="note.description"></mat-card-title>
+    </mat-card-header>
+    
+  </mat-card>
+</div> -->
+
+<div fxLayout="row wrap" fxLayoutAlign="center" style="margin-top: 20px;">
+
+  <div class="note-card" fxFlex="240px" fxFlex.xs="100%" *ngFor="let note of notes" style="margin: 10px; background: white;">
+    <div style="font-weight: bold; padding: 10px 15px 0px 15px;" [innerHTML]="note.title"></div>
+
+    <div style="padding: 12px 15px 15px 15px;" [innerHTML]="note.description"></div>
+
+    <div fxLayout="row" class="action">
+      <a fxFlex="38px" fxFlexAlign="center" class="action-element">
+        <img class="action-img" src="assets/reminder.svg">
+      </a>
+
+      <a fxFlex="38px" class="action-element">
+        <img class="action-img" src="assets/collaborator.svg">
+      </a>
+
+      <a fxFlex="38px" class="action-element">
+        <img class="action-img" src="assets/color-pallete.svg">
+      </a>
+
+      <a fxFlex="38px" class="action-element">
+        <img class="action-img" src="assets/gallery.svg">
+      </a>
+
+      <a fxFlex="38px" class="action-element">
+        <img class="action-img" src="assets/archive.svg">
+      </a>
+
+      <a fxFlex="38px" class="action-element">
+        <img class="action-img" src="assets/more.svg">
+      </a>
+    </div>
+
+  </div>

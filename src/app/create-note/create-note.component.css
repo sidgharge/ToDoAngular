@@ -14,10 +14,17 @@
 
 .action-element {
     cursor: pointer;
+    opacity: .54;
+    padding: 2px;
 }
 
 .action-img {
-    width: 22px;
+    width: 20px;
+    margin: 3px;
+}
+
+.action-element :hover {
+    opacity: 1;
 }
 
 .btn-done {

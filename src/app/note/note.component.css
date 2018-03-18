@@ -1,4 +1,24 @@
-.note-card {
-    width: 240px;
-    display: inline-block;
+.note-card :hover .action {
+    visibility: visible;
+}
+
+.action-element {
+    cursor: pointer;
+    opacity: .54;
+    padding: 2px;
+}
+
+.action-img {
+    width: 20px;
+    margin: 3px;
+}
+
+.action-element :hover {
+    opacity: 1;
+}
+
+.action{
+    background-color: white; 
+    padding: 4px 4px;
+    visibility: visible;
 }

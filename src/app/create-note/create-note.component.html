@@ -6,29 +6,34 @@
   </mat-card-header>
 
   <mat-card-header fxLayout="row" style="margin-top: 10px;">
-    <div id="description" fxFlex="530px" fxFlex.xs="100%" contenteditable="true" role="textbox" data-text="Take a note..." class="title" style="font-weight: normal;"></div>
+    <div id="description" fxFlex="530px" fxFlex.xs="100%" contenteditable="true" role="textbox" data-text="Take a note..." class="title"
+      style="font-weight: normal;"></div>
   </mat-card-header>
 
-  <mat-card-header fxLayout="row" fxLayoutWrap="wrap" fxLayoutGap="15px" style="margin-top: 10px;">
-    <a class="action-element">
-      <img class="action-img" src="assets/reminder.svg">
-    </a>
-
-    <a class="action-element">
-      <img class="action-img" src="assets/collaborator.svg">
-    </a>
-
-    <a class="action-element">
-      <img class="action-img" src="assets/gallery.svg">
-    </a>
-
-    <a class="action-element">
-      <img class="action-img" src="assets/archive.svg">
-    </a>
-
-    <a class="action-element">
-      <img class="action-img" src="assets/more.svg">
-    </a>
+  <mat-card-header fxLayout="row" style="margin-top: 10px;">
+      <a fxFlex="38px" fxFlexAlign="center" class="action-element">
+          <img class="action-img" src="assets/reminder.svg">
+        </a>
+  
+        <a fxFlex="38px" class="action-element">
+          <img class="action-img" src="assets/collaborator.svg">
+        </a>
+  
+        <a fxFlex="38px" class="action-element">
+          <img class="action-img" src="assets/color-pallete.svg">
+        </a>
+  
+        <a fxFlex="38px" class="action-element">
+          <img class="action-img" src="assets/gallery.svg">
+        </a>
+  
+        <a fxFlex="38px" class="action-element">
+          <img class="action-img" src="assets/archive.svg">
+        </a>
+  
+        <a fxFlex="38px" class="action-element">
+          <img class="action-img" src="assets/more.svg">
+        </a>
 
     <div fxFlexAlign="center" class="btn-done-div" (click)="createNote()">
       <span class="btn-done">DONE</span>
