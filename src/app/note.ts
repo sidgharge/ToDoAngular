@@ -1,22 +1,22 @@
-export class Note{
+export class Note {
 
-    noteId: number;
+noteId: number;
 
-	title: string;
+title: string;
 
-	description: string;
+description: string;
 
-	createdAt: Date;
+createdAt: Date;
 
-	modifiedAt: Date;
+modifiedAt: Date;
 
-	color: string;
+color: string;
 
-	isArchived: boolean;
+isArchived: boolean;
 
-	reminder: Date;
+reminder: Date;
 
-	isPinned: boolean;
+isPinned: boolean;
 
-	isTrashed: boolean;
+isTrashed: boolean;
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginService } from '../login.service';
 
 @Component({
   selector: 'app-create-note',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateNoteComponent implements OnInit {
 
-  constructor() { }
+  newNote: any = {};
+
+  constructor(private _service: LoginService) { }
 
   ngOnInit() {
+  }
+
+  createNote() {
+    this.newNote.title = (document.getElementById('title')).innerHTML;
+    this.newNote.description = (document.getElementById('description')).innerHTML;
+    this._service.createNote(this.newNote).subscribe(data => {
+      this._service.notes.push(data);
+      (document.getElementById('title')).innerHTML = '';
+      (document.getElementById('description')).innerHTML = '';
+      }
+    );
   }
 
 }

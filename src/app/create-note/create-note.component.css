@@ -19,3 +19,14 @@
 .action-img {
     width: 22px;
 }
+
+.btn-done {
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-done-div :hover {
+    background-color: grey;
+    color: white;
+}

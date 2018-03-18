@@ -1,15 +1,15 @@
 <mat-card fxFlex="600px" fxFlex.xs="100%" fxFlexAlign="center">
   <mat-card-header fxLayout="row">
 
-    <div fxFlex="530px" fxFlex.xs="100%" contenteditable="true" role="textbox" data-text="Title" class="title"></div>
+    <div id="title" fxFlex="530px" fxFlex.xs="100%" contenteditable="true" role="textbox" data-text="Title" class="title"></div>
 
   </mat-card-header>
 
   <mat-card-header fxLayout="row" style="margin-top: 10px;">
-    <div fxFlex="530px" fxFlex.xs="100%" contenteditable="true" role="textbox" data-text="Take a note..." class="title" style="font-weight: normal;"></div>
+    <div id="description" fxFlex="530px" fxFlex.xs="100%" contenteditable="true" role="textbox" data-text="Take a note..." class="title" style="font-weight: normal;"></div>
   </mat-card-header>
 
-  <mat-card-header fxLayout="row" fxLayoutGap="15px" style="margin-top: 10px;">
+  <mat-card-header fxLayout="row" fxLayoutWrap="wrap" fxLayoutGap="15px" style="margin-top: 10px;">
     <a class="action-element">
       <img class="action-img" src="assets/reminder.svg">
     </a>
@@ -30,8 +30,9 @@
       <img class="action-img" src="assets/more.svg">
     </a>
 
-    <span fxFlexAlign="center">DONE</span>
-
+    <div fxFlexAlign="center" class="btn-done-div" (click)="createNote()">
+      <span class="btn-done">DONE</span>
+    </div>
   </mat-card-header>
 
 </mat-card>

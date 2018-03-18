@@ -14,11 +14,14 @@ export class NoteComponent implements OnInit {
   constructor(private _loginService: LoginService) { }
 
   ngOnInit() {
-    this._loginService.getNotes().subscribe(
-      res => {
-        this.notes = res.notes;
-      }
-    );
+    this.notes = this._loginService.notes;
+
+    if (this.notes === undefined) {
+      this._loginService.getNotes().subscribe(data => {
+        this.notes = data.notes;
+        this._loginService.notes = this.notes;
+      });
+    }
   }
 
 }
