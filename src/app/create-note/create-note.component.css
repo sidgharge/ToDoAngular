@@ -36,15 +36,18 @@
     opacity: .87;
 }
 
-.btn-done {
+.btn-done-div {
     padding: 5px;
     border-radius: 5px;
     cursor: pointer;
+    position: absolute;
+    right: 25px;
+    font-size: 13px;
 }
 
-.btn-done-div :hover {
-    background-color: grey;
-    color: white;
+.btn-done-div:hover {
+    background-color: rgba(0,0,0,0.08);
+    /* color: white; */
 }
 
 .pin {

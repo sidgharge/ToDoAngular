@@ -2,13 +2,13 @@
 
   <mat-toolbar class="toolbar-color">
     <span>
-      <b>Fundoo</b> Keep
+      <b (click)="sidenav.toggle()">Fundoo</b> Keep
     </span>
   </mat-toolbar>
 
   <mat-sidenav-container class="side-container">
 
-    <mat-sidenav mode="side" #sidenav opened fxHide.xs style="background-color: #e8e8e8; width: 280px;">
+    <mat-sidenav mode="side" #sidenav closed style="background-color: #e8e8e8; width: 280px;">
 
       <ul>
         <li>
