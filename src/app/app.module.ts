@@ -12,6 +12,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatDividerModule } from '@angular/material/divider';
+
 
 import { AppComponent } from './app.component';
 import { RegistrationComponent } from './registration/registration.component';
@@ -20,6 +22,7 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { NoteComponent } from './note/note.component';
 import { CreateNoteComponent } from './create-note/create-note.component';
+import { NoteFilterPipe } from './note-filter.pipe';
 
 
 @NgModule({
@@ -29,7 +32,8 @@ import { CreateNoteComponent } from './create-note/create-note.component';
     LoginComponent,
     HomeComponent,
     NoteComponent,
-    CreateNoteComponent
+    CreateNoteComponent,
+    NoteFilterPipe
   ],
   imports: [
     BrowserModule,
@@ -44,6 +48,7 @@ import { CreateNoteComponent } from './create-note/create-note.component';
     MatSidenavModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
+    MatDividerModule,
     RouterModule.forRoot([
       {
         'path': 'register',

@@ -1,6 +1,6 @@
 <div fxLayout="row wrap" fxLayoutAlign="center" style="margin-top: 20px;">
 
-  <div class="note-card" fxFlex="240px" fxFlex.xs="100%" *ngFor="let note of notes">
+  <div class="note-card" fxFlex="240px" fxFlex.xs="100%" *ngFor="let note of notes | noteFilter">
     
       <img src="assets/pin.svg" class="action-element pin" (click)="pin()">
     

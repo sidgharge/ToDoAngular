@@ -11,12 +11,36 @@
     <mat-sidenav mode="side" #sidenav closed style="background-color: #e8e8e8; width: 280px;">
 
       <ul>
-        <li>
-            <div class="side-element">
-              <img width="24px" src="assets/keep-grey.png">
-            <span style="padding-left: 32px;">Notes</span>
-            </div>
+
+        <li class="sidebar-item" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="20px">
+          <img class="opaque" width="20px" height="20px" fxFlex="30px" src="assets/bulb.svg">
+          <span fxFlex>Notes</span>
         </li>
+
+        <li class="sidebar-item" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="20px">
+            <img class="opaque" width="20px" height="20px" fxFlex="30px" src="assets/reminder.svg">
+            <span fxFlex>Reminders</span>
+        </li>
+
+        <mat-divider style="margin: 5px 0px"></mat-divider>
+
+        <li class="sidebar-item" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="20px">
+            <img class="opaque" width="20px" height="20px" fxFlex="30px" src="assets/reminder.svg">
+            <span fxFlex>Labels</span>
+        </li>
+
+        <mat-divider style="margin: 5px 0px"></mat-divider>
+
+        <li class="sidebar-item" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="20px">
+            <img class="opaque" width="20px" height="20px" fxFlex="30px" src="assets/archive.svg">
+            <span fxFlex>Archives</span>
+        </li>
+
+        <li class="sidebar-item" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="20px">
+            <img class="opaque" width="20px" height="20px" fxFlex="30px" src="assets/delete.svg">
+            <span fxFlex>Trash</span>
+        </li>
+
       </ul>
       
     </mat-sidenav>

@@ -18,14 +18,21 @@
     background-color: #e8e8e8;
   }
 
-  .side-element {
-    cursor: pointer;
-  }
-
-  .side-element :hover {
-    background: rgba(0,0,0,0.12);
-  }
-
   ul {
     list-style-type: none;
+    padding-left: 0px;
+  }
+
+  .sidebar-item{
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 2px;
+  }
+
+  .sidebar-item:hover {
+    background-color: rgba(0,0,0,0.12);
+  }
+
+  .opaque {
+    opacity: .54;
   }
