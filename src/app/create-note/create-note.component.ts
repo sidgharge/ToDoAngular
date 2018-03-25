@@ -52,12 +52,10 @@ export class CreateNoteComponent implements OnInit {
   }
 
   saveNoteOnOutSideClick() {
-    console.log('called');
-    if (!this.hideInput) {
-      this.createNote();
-    } else {
-      this.showInput();
-    }
+    // console.log('called');
+    // if (!this.hideInput) {
+    //   this.createNote();
+    // }
   }
 
 }

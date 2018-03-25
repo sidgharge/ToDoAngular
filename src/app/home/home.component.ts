@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Note } from '../note';
 import { LoginService } from '../login.service';
+import { CreateNoteComponent } from '../create-note/create-note.component';
 
 @Component({
   selector: 'app-home',
@@ -10,6 +11,8 @@ import { LoginService } from '../login.service';
 export class HomeComponent implements OnInit {
 
   notes: Note[];
+
+  @ViewChild(CreateNoteComponent) createNote: CreateNoteComponent;
 
   constructor(private _loginService: LoginService) { }
 
@@ -37,6 +40,10 @@ export class HomeComponent implements OnInit {
     const filters = new Map<string, string>();
     filters.set('pin', 'false');
     return filters;
+  }
+
+  addNote() {
+    this.createNote.saveNoteOnOutSideClick();
   }
 
 }
