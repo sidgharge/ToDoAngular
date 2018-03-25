@@ -24,9 +24,12 @@ export class CreateNoteComponent implements OnInit {
     this.newNote.description = (document.getElementById('description')).innerHTML;
     this.newNote.isPinned = this.pinned;
     this._service.createNote(this.newNote).subscribe(data => {
+      console.log(data);
       this._service.notes.push(data);
       (document.getElementById('title')).innerHTML = '';
       (document.getElementById('description')).innerHTML = '';
+      this.pinSrc = 'assets/pin.svg';
+      this.pinned = false;
       }
     );
   }

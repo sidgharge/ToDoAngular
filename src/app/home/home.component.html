@@ -47,8 +47,10 @@
 
     <mat-sidenav-content>
       <app-create-note fxLayoutAlign="center" style="margin-top: 20px;"></app-create-note>
-      <!-- <app-note fxLayput="row" fxLayoutWrap="wrap" fxLayoutGap="10px" style="margin-top: 20px;"></app-note> -->
-      <app-note></app-note>
+      Pinned:
+      <app-note [filter]='pinnedFilter'></app-note>
+      Others:
+      <app-note [filter]='othersFilter'></app-note>
 
     </mat-sidenav-content>
 

@@ -10,7 +10,7 @@ import { Note } from './note';
 @Injectable()
 export class LoginService {
 
-  notes: Note[];
+  notes: Note[] = [];
 
   constructor(private _http: HttpClient) {
   }
