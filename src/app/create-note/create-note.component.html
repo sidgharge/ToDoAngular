@@ -1,16 +1,20 @@
 <div fxFlex="600px" fxFlex.xs="100%" fxFlexAlign="center" class="parent">
 
-  <div fxLayout="row" style="padding: 10px 15px;">
+  <div fxLayout="row" style="padding: 10px 15px;" fxShow="{{hideInput}}" (click)="showInput()">
+    <div fxFlex="530px" fxFlex.xs="100%" contenteditable="true" role="textbox" data-text="Take a note..." class="title" style="font-weight: normal;"></div>
+  </div>
+
+  <div fxLayout="row" style="padding: 10px 15px;" fxHide="{{hideInput}}">
     <img [src]="pinSrc" class="action-element pin" (click)="pin()">
     <div id="title" fxFlex="530px" fxFlex.xs="100%" contenteditable="true" role="textbox" data-text="Title" class="title"></div>
   </div>
 
-  <div fxLayout="row" style="padding: 10px 15px;">
+  <div fxLayout="row" style="padding: 10px 15px;" fxHide="{{hideInput}}">
     <div id="description" fxFlex="530px" fxFlex.xs="100%" contenteditable="true" role="textbox" data-text="Take a note..." class="title"
       style="font-weight: normal;"></div>
   </div>
 
-  <div style="padding: 4px; position: relative">
+  <div fxLayout="row" style="padding: 4px; position: relative"  fxHide="{{hideInput}}">
     <a fxFlex="46px" fxFlexAlign="center" class="action-element">
       <img class="action-img" src="assets/reminder.svg">
     </a>

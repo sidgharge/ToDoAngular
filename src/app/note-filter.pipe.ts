@@ -8,7 +8,6 @@ export class NoteFilterPipe implements PipeTransform {
         const filteredNotes: Note[] = [];
 
         if (notes !== undefined) {
-            console.log(notes.length, filters);
             notes.forEach(note => {
                 let added = true;
                 if (filters.get('pin') === 'true' && !note.isPinned) {
@@ -23,7 +22,6 @@ export class NoteFilterPipe implements PipeTransform {
             });
 
         }
-        console.log('filtered', filteredNotes);
         return filteredNotes;
     }
 }

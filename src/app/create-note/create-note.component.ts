@@ -14,14 +14,16 @@ export class CreateNoteComponent implements OnInit {
 
   pinned = false;
 
+  hideInput = true;
+
   constructor(private _service: LoginService) { }
 
   ngOnInit() {
   }
 
   createNote() {
-    this.newNote.title = (document.getElementById('title')).innerHTML;
-    this.newNote.description = (document.getElementById('description')).innerHTML;
+    this.newNote.title = document.getElementById('title').innerHTML;
+    this.newNote.description = document.getElementById('description').innerHTML;
     this.newNote.isPinned = this.pinned;
     this._service.createNote(this.newNote).subscribe(data => {
       console.log(data);
@@ -30,6 +32,7 @@ export class CreateNoteComponent implements OnInit {
       (document.getElementById('description')).innerHTML = '';
       this.pinSrc = 'assets/pin.svg';
       this.pinned = false;
+      this.showInput();
       }
     );
   }
@@ -41,6 +44,19 @@ export class CreateNoteComponent implements OnInit {
     } else {
       this.pinSrc = 'assets/bluepin.svg';
       this.pinned = true;
+    }
+  }
+
+  showInput() {
+    this.hideInput = !this.hideInput;
+  }
+
+  saveNoteOnOutSideClick() {
+    console.log('called');
+    if (!this.hideInput) {
+      this.createNote();
+    } else {
+      this.showInput();
     }
   }
 
