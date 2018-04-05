@@ -19,4 +19,8 @@ export class NoteComponent implements OnInit {
     this.notes = this._loginService.notes;
   }
 
+  pin(note: Note){
+    note.isPinned = !note.isPinned;
+  }
+
 }

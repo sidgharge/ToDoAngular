@@ -1,8 +1,11 @@
-<div fxLayout="row wrap" fxLayoutAlign="center" style="margin-top: 20px;">
+<div fxLayout="row wrap" fxLayoutAlign="center">
+    <div fxFlex="780px" fxFlex.xs="calc(100% - 20px)" style="color: rgba(0,0,0,.54); padding: 10px;">Pinned</div>
+</div>
 
+<div fxLayout="row wrap" fxLayoutAlign="center" style="margin-top: 20px;">
   <div class="note-card" fxFlex="240px" fxFlex.xs="100%" *ngFor="let note of notes | noteFilter:filter">
 
-    <img src="assets/pin.svg" class="action-element pin" (click)="pin()">
+    <img src="assets/pin.svg" class="action-element pin" (click)="pin(note)">
 
     <div style="font-weight: bold; padding: 10px 15px 0px 15px;" [innerHTML]="note.title"></div>
 
